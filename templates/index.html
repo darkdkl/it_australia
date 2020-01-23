@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container col-md-2">
+    <form method='GET'>
+        <div class="form-group">
+          <label for="delivery_from">Откуда</label>
+          <input type="text" class="form-control" name="delivery_from">
+            <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="from_door">
+            <label class="form-check-label" for="from_door">Забрать груз у отправителя</label>
+
+
+
+        </div>
+        <div class="form-group">
+          <label for="delivery_to">Куда</label>
+          <input type="text" class="form-control" name="delivery_to">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" name="to_door">
+          <label class="form-check-label" for="to_door">Доставить груз до дверей</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Рассчитать</button>
+      </form>
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
