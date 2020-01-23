@@ -28,8 +28,11 @@
           <label class="form-check-label" for="to_door">Доставить груз до дверей</label>
         </div>
         <button type="submit" class="btn btn-primary">Рассчитать</button>
-      </form>
-
+        </form>
+      <h2> Стоимость доставки  {{context.delivery_from}} - {{context.delivery_to}}</h2><br>
+      Полная стоимость :{{context.total}} {{context.currency}}<br>
+      Стоимость забора от адреса :{{context.cost_in_door}} {{context.currency}}<br>
+      Стоимость перевозки : {{context.cost_only_delivery}}
     </div>
 
 

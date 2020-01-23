@@ -71,12 +71,21 @@ def index():
     delivery_to=request.args.get('delivery_to')
     from_door=request.args.get('from_door')
     to_door=request.args.get('to_door')
+    context= None
     if delivery_from and delivery_to:
-        print(get_calculate_ship(get_kladr_id(str(delivery_from) ),get_kladr_id(str(delivery_to)),from_door=from_door,to_door=to_door))
+       total,currency,cost_in_door = get_calculate_ship(get_kladr_id(str(delivery_from) ),get_kladr_id(str(delivery_to)),from_door=from_door,to_door=to_door)
+       cost_only_delivery= float(total) - float(cost_in_door)
+       context={
+                'delivery_to':delivery_to,
+                'delivery_from':delivery_from,
+                'total':total,
+                'currency':currency,
+                'cost_in_door':cost_in_door,
+                'cost_only_delivery':cost_only_delivery
+                }
+        
 
-    
-
-    return render_template('index.html',)
+    return render_template('index.html',context=context)
 
 
 if __name__ == "__main__":
